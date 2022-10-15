@@ -10,6 +10,7 @@ const nextConfig = {
       "views",
       "uiLayer.chakra",
       "utils",
+      "constants",
     ]
   }
 };
