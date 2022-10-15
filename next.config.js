@@ -11,6 +11,7 @@ const nextConfig = {
       "uiLayer.chakra",
       "utils",
       "constants",
+      "components",
     ]
   }
 };
