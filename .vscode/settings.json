@@ -8,5 +8,15 @@
   },
   "cSpell.words": [
     "chakra"
-  ]
+  ],
+  "[json]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false,
+    },
+  },
+  "[jsonc]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false,
+    },
+  }
 }
