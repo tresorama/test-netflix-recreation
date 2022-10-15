@@ -1,3 +1,4 @@
+import { ColorModeScript } from '@chakra-ui/react';
 import { Html, Head, Main, NextScript } from 'next/document';
 import theme from '@/uiLayer.chakra/uiLayer.chakra.customTheme';
 
@@ -8,6 +9,7 @@ export default function Document() {
         <PWA />
       </Head>
       <body>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Main />
         <NextScript />
       </body>

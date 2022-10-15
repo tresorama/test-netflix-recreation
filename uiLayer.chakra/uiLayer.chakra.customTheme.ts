@@ -10,6 +10,11 @@ import { theme as baseTheme, extendTheme } from "@chakra-ui/react";
 // 1. Declare "parts" of the custom theme to include custom colors, fonts, etc
 //
 
+const config: ThemeConfig = {
+  initialColorMode: "system",
+  useSystemColorMode: true,
+};
+
 const semanticTokens = {
   colors: {
     mainBg: { _light: "#FDFFF9", _dark: "#121212" },
@@ -20,6 +25,13 @@ const semanticTokens = {
     heroBg: "mainBg",
     heroText: "text",
     heroMainTitle: { _light: "mainBg", _dark: "white" },
+  },
+};
+
+const globalStyles = {
+  body: {
+    bg: "mainBg",
+    color: "text",
   },
 };
 
@@ -54,18 +66,6 @@ const textStyles = {
     fontWeight: "normal",
     letterSpacing: "0.1em",
   },
-};
-
-const globalStyles = {
-  body: {
-    bg: "mainBg",
-    color: "text",
-  },
-};
-
-const config: ThemeConfig = {
-  initialColorMode: "dark",
-  useSystemColorMode: false,
 };
 
 //

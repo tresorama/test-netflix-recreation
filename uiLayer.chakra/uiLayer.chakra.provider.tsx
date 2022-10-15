@@ -1,5 +1,5 @@
 import React from "react";
-import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./uiLayer.chakra.customTheme";
 
 interface IChakraUIProviderProps {
@@ -8,7 +8,6 @@ interface IChakraUIProviderProps {
 export default function ChakraUIProvider(props: IChakraUIProviderProps) {
   return (
     <>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <ChakraProvider theme={theme}>{props.children}</ChakraProvider>
     </>
   );
