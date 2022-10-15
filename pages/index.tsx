@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css';
 
 import ChakraUIProvider from '@/uiLayer.chakra/uiLayer.chakra.provider';
 import { Box, Code, Heading, Stack, Text } from '@chakra-ui/react';
+import { NavBottomBar } from '@/views/shared/components/NavBottomBar/NavBottomBar';
 
 const Home: NextPage = () => {
   return (
@@ -28,6 +29,7 @@ const ChakraSection = () => (
         <Text>If you will use Chakra UI in more pages, consider moving the <Code>{'<ChakraUIProvider>'}</Code> in <Code>/pages/_app.tsx</Code> or in <Code>/pages/_document.tsx</Code></Text>
       </Stack>
     </Box>
+    <NavBottomBar />
   </ChakraUIProvider>
 )
 const DefaultNextSection = () => (
