@@ -1,3 +1,9 @@
+## Tips
+
+If you create a new directory in root add it to eslint configuration, so eslint can scan that dir. Go to `next.config.js > eslint > dir`.
+
+## Next.js
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
