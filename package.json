@@ -16,7 +16,9 @@
     "prepare": "husky install",
     "gen:theme-typings": "chakra-cli tokens ./uiLayer.chakra/uiLayer.chakra.customTheme.ts",
     "postinstall": "npm run gen:theme-typings",
-    "open-browser": "open http://localhost:3000 && exit 0"
+    "open-browser": "open http://localhost:3000 && exit 0",
+    "deps:auto-upgrade-test": "npm update && npm run build && npm run start",
+    "deps:auto-upgrade-execute": "npm update --save"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.10",
