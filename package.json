@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev:openbrowser": "npm run open-browser && npm run dev",
-    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "dev": "next dev",
     "build": "rm -rf .next && next build",
     "start": "next start",
     "lint": "next lint",
