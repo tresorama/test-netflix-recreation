@@ -1,6 +1,17 @@
-## Tips
+# What is Included
 
-If you create a new directory in root add it to eslint configuration, so eslint can scan that dir. Go to `next.config.js > eslint > dir`.
+Includes:
+
+- Next.js
+- Chakra UI
+- Bottom Bar with Navigation + Color Mode Toggler
+
+Includes also this for developmemt:
+
+- Pages Examples
+- DebugBar (Inside NavBottomBar)
+- husky + commitlint
+- jest
 
 ## Next.js
 

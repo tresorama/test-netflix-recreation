@@ -6,6 +6,7 @@
     "source.fixAll": true,
     "source.organizeImports": false
   },
+  // "cSpell" - VS Code extension
   "cSpell.words": [
     "chakra"
   ],
