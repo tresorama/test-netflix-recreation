@@ -4,6 +4,7 @@ Includes:
 
 - Next.js
 - Chakra UI
+- tRPC v10-beta, API Layer
 - Bottom Bar with Navigation + Color Mode Toggler
 
 Includes also this for developmemt:
