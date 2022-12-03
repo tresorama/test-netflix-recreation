@@ -1,9 +1,12 @@
 import { TRPCError, initTRPC } from '@trpc/server';
+import superjson from 'superjson';
 
 // Avoid exporting the entire t-object since it's not very
 // descriptive and can be confusing to newcomers used to t
 // meaning translation in i18n libraries.
-const t = initTRPC.create();
+const t = initTRPC.create({
+  transformer: superjson,
+});
 
 /** tRPC router */
 export const router = t.router;
