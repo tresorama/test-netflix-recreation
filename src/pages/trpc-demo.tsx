@@ -1,10 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { trpc } from '@/lib/trpc';
-import Link from 'next/link';
 
 const Page: NextPage = () => {
-  const { data } = trpc.hello.useQuery({ text: 'Luke', text2: "welcome back" });
+  const { data } = trpc.todo.getAll.useQuery();
 
   return (
     <>
@@ -13,9 +12,8 @@ const Page: NextPage = () => {
       </Head>
       <div>
         <h1>tRPC Demo Page</h1>
-        <p>{data}</p>
+        <p>{JSON.stringify(data, null, 1)}</p>
         <p>---</p>
-        <p>You can also go to <Link href="/api/hello">/api/hello</Link></p>
       </div>
     </>
   );
