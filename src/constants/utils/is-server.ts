@@ -3,6 +3,14 @@ const isDOM = () => Boolean(
   window.document &&
   window.document.documentElement
 );
+const isTest = () => {
+  if (process.env.JEST_WORKER_ID !== undefined) return true;
+  if (process.env.NODE_ENV === 'test') return true;
+  return false;
+};
 
-export const isBrowser = isDOM;
+export const isBrowser = () => {
+  if (isTest()) return false;
+  return isDOM();
+};
 export const isServer = () => !isDOM();
