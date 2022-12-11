@@ -1,5 +1,10 @@
 import type { ThemeOverride, ThemeConfig } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, baseTheme as chakraTheme } from "@chakra-ui/react";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../../tailwind.config";
+
+// Tailwind Design System Theme
+const { theme: tailwindTheme } = resolveConfig(tailwindConfig);
 
 // TIP:
 // When theme grows is size, a single theme.ts file is hard to manage.
@@ -15,27 +20,33 @@ const config: ThemeConfig = {
   useSystemColorMode: true,
 };
 
-const semanticTokens = {
+const colors: ThemeOverride['colors'] = {
+  ...chakraTheme.colors,
+  //...tailwindTheme?.colors,
+  gray: (tailwindTheme?.colors as any).zinc,
+};
+
+const semanticTokens: ThemeOverride['semanticTokens'] = {
   colors: {
+    textPrimary: { _light: "black", _dark: "white" },
+    textSecondary: { _light: "gray.600", _dark: "gray.200" },
+    textTertiary: { _light: "gray.500", _dark: "gray.500" },
+    textQuaternary: { _light: "gray.400", _dark: "gray.600" },
+    bgPrimary: { _light: "white", _dark: "black" },
+    bgSecondary: { _light: "gray.100", _dark: "gray.900" },
+    bgTertiary: { _light: "gray.200", _dark: "gray.800" },
+    bgQuaternary: { _light: "gray.300", _dark: "gray.700" },
+    // photographer view
     mainBg: { _light: "#FDFFF9", _dark: "#121212" },
-    text: { _light: "#121212", _dark: "whiteAlpha.900" },
-    textFaded: { _light: "#616161" },
-    headers: { _light: "#000000", _dark: "#ffffff" },
-    // hero
+    mainText: { _light: "#121212", _dark: "whiteAlpha.900" },
+    // photographer view - hero
     heroBg: "mainBg",
-    heroText: "text",
+    heroText: "mainText",
     heroMainTitle: { _light: "mainBg", _dark: "white" },
   },
 };
 
-const globalStyles = {
-  body: {
-    bg: "mainBg",
-    color: "text",
-  },
-};
-
-const textStyles = {
+const textStyles: ThemeOverride['textStyles'] = {
   // /photographer page
   logo: {
     fontFamily: "Futura",
@@ -67,16 +78,24 @@ const textStyles = {
   },
 };
 
+const styles: ThemeOverride['styles'] = {
+  global: {
+    body: {
+      bg: "bgPrimary",
+      color: "textPrimary",
+    },
+  }
+};
+
 //
 // 2. Compose the "parts" of the custom theme
 //
 const themeOverrides: ThemeOverride = {
+  config,
+  colors,
   semanticTokens,
   textStyles,
-  styles: {
-    global: globalStyles,
-  },
-  config,
+  styles,
 };
 
 // 3. Extend "baseTheme" with "customTheme" overrides and export it.
