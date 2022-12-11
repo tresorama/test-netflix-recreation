@@ -36,13 +36,10 @@ const semanticTokens: ThemeOverride['semanticTokens'] = {
     bgSecondary: { _light: "gray.100", _dark: "gray.900" },
     bgTertiary: { _light: "gray.200", _dark: "gray.800" },
     bgQuaternary: { _light: "gray.300", _dark: "gray.700" },
-    // photographer view
-    mainBg: { _light: "#FDFFF9", _dark: "#121212" },
-    mainText: { _light: "#121212", _dark: "whiteAlpha.900" },
     // photographer view - hero
-    heroBg: "mainBg",
-    heroText: "mainText",
-    heroMainTitle: { _light: "mainBg", _dark: "white" },
+    heroBg: "bgPrimary",
+    heroText: "textPrimary",
+    heroMainTitle: { _light: "bgPrimary", _dark: "white" },
   },
 };
 

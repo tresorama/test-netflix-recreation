@@ -1,16 +1,13 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { ChakraUIProvider } from '@/lib/chakra-ui/chakra.provider';
-import { PhotographLandingView } from '@/views/PhotograpLandingView/PhotographLandingView';
+import { PhotographerView } from '@/views/Photographer';
 
 const Page: NextPage = () => (
   <>
     <Head>
       <title>Photograper</title>
     </Head>
-    <ChakraUIProvider>
-      <PhotographLandingView />
-    </ChakraUIProvider>
+    <PhotographerView />
   </>
 );
 

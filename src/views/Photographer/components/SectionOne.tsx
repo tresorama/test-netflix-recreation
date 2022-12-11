@@ -44,13 +44,13 @@ const Images = () => {
       gridTemplateRows="repeat(11, 1fr)"
     >
       <GridItem gridColumn="3/-1" gridRow="4/-3">
-        <Image src={images[2]} h="full" objectFit="cover" />
+        <Image src={images[2]} alt="#" h="full" objectFit="cover" />
       </GridItem>
       <GridItem gridColumn="1/7" gridRow="5/-1">
-        <Image src={images[0]} h="full" objectFit="cover" />
+        <Image src={images[0]} alt="#" h="full" objectFit="cover" />
       </GridItem>
       <GridItem gridColumn="6/13" gridRow="1/8">
-        <Image src={images[1]} h="full" objectFit="cover" />
+        <Image src={images[1]} alt="#" h="full" objectFit="cover" />
       </GridItem>
     </Grid>
   );

@@ -42,7 +42,7 @@ const TheVideo = () => {
   return (
     <Grid gridTemplateRows="55vmin">
       <GridItem gridColumn="1/-1" gridRow="1/-1">
-        <Image src={image} w="full" h="full" objectFit="cover" />
+        <Image src={image} alt="#" w="full" h="full" objectFit="cover" />
       </GridItem>
       <GridItem
         gridColumn="1/-1"

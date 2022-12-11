@@ -1,3 +1,4 @@
+import { ChakraUIProvider } from "@/lib/chakra-ui/chakra.provider";
 import { Box } from "@chakra-ui/react";
 import { ColorModeToggler } from "./components/ColorModeToggler";
 import { Footer } from "./components/Footer";
@@ -9,18 +10,18 @@ import { Testimonials } from "./components/Testimonials";
 import { TheHero } from "./components/TheHero";
 import { SIDE_MARGIN } from "./shared/components/layout/GridMain";
 
-export const PhotographLandingView = () => {
-  return (
-    <>
+export const PhotographerView = () => (
+  <>
+    <ChakraUIProvider>
       <Header />
       <TheHero />
-      <Box mt={12}>
+      <Box mt="12">
         <ScrollMore />
       </Box>
-      <Box mt={32}>
+      <Box mt="32">
         <SectionOne />
       </Box>
-      <Box mt={56}>
+      <Box mt="56">
         <SectionTwo />
       </Box>
       <Testimonials />
@@ -28,16 +29,17 @@ export const PhotographLandingView = () => {
       <Box
         sx={{
           position: "fixed",
-          top: 0,
-          right: 0,
+          top: "0",
+          right: "0",
           w: SIDE_MARGIN,
           display: "flex",
           justifyContent: "center",
-          mt: 8,
+          mt: "8",
         }}
       >
         <ColorModeToggler />
       </Box>
-    </>
-  );
-};
+    </ChakraUIProvider>
+  </>
+);
+
