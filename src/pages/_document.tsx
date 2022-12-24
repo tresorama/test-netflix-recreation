@@ -1,16 +1,12 @@
-import { ColorModeScript } from '@chakra-ui/react';
 import { Html, Head, Main, NextScript } from 'next/document';
-import customTheme from '@/lib/chakra-ui/chakra.theme';
 
 export default function Document() {
   return (
     <Html>
       <Head>
-        <PWA />
+        {/* <PWA /> */}
       </Head>
       <body>
-        {/* CHAKRA-UI - COLOR MODE SCRIPT */}
-        <ColorModeScript initialColorMode={customTheme.config.initialColorMode} />
         <Main />
         <NextScript />
       </body>
